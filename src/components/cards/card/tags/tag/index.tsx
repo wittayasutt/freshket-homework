@@ -20,7 +20,6 @@ const TagComponent = ({ tag }: TagProps) => {
 	// Note: there are 2 values in the data that I get provided (name and type), so I am not too sure which one should be used.
 	const label = useMemo(() => tags.find((item: Tag) => item.id === tag)?.name, [tag]);
 
-	// TODO: add unit test
 	return <Wrapper>{label}</Wrapper>;
 };
 

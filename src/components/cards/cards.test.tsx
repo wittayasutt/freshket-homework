@@ -6,25 +6,11 @@ import theme from '@/styles/theme';
 
 import Cards from './index';
 
-jest.mock('@/mocks/tags.json', () => {
-	[
-		{
-			id: 1,
-			name: 'Brinebeast',
-			type: 'Earth',
-		},
-		{
-			id: 2,
-			name: 'Goolu',
-			type: 'Air',
-		},
-		{
-			id: 3,
-			name: 'Macaronifeet',
-			type: 'Fire',
-		},
-	];
-});
+jest.mock('@/mocks/tags.json', () => [
+	{ id: 1, name: 'Brinebeast', type: 'Earth' },
+	{ id: 2, name: 'Goolu', type: 'Air' },
+	{ id: 3, name: 'Macaronifeet', type: 'Fire' },
+]);
 
 const wrapper = ({ children }: { children: ReactNode }) => {
 	return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
@@ -36,7 +22,7 @@ describe('cards', () => {
 		expect(screen.queryByTestId('card')).not.toBeInTheDocument();
 	});
 
-	it('should render Cards component with correct number of cards', () => {
+	it('should render Card component with correct number of cards', () => {
 		const mockData = [
 			{
 				id: 1,
