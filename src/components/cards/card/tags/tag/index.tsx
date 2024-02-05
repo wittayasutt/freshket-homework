@@ -1,8 +1,11 @@
 import styled from 'styled-components';
-import { Tag } from '@/types/place';
+import { useMemo } from 'react';
+import { Tag } from '@/types/tag';
+
+import tags from '@/mocks/tags.json';
 
 type TagProps = {
-	tag: Tag;
+	tag: number;
 };
 
 const Wrapper = styled.div`
@@ -14,7 +17,10 @@ const Wrapper = styled.div`
 `;
 
 const TagComponent = ({ tag }: TagProps) => {
-	return <Wrapper>{tag}</Wrapper>;
+	// Note: there are 2 values in the data that I get provided (name and type), so I am not too sure which one should be used.
+	const label = useMemo(() => tags.find((item: Tag) => item.id === tag)?.name, [tag]);
+
+	return <Wrapper>{label}</Wrapper>;
 };
 
 export default TagComponent;

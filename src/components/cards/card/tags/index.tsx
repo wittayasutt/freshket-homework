@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { Tag } from '@/types/place';
 import TagComponent from './tag';
 
 type TagsProps = {
-	tags: Tag[];
+	tags: number[];
 };
 
 const Wrapper = styled.div`

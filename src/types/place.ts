@@ -1,9 +1,7 @@
 export type Place = {
 	id: number;
-	tags: Tag[];
+	tags: number[];
 	name: string;
 	body: string;
 	img_url: string;
 };
-
-export type Tag = number;
