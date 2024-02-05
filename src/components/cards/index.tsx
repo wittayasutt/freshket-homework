@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 	}
 
 	@media (min-width: ${(props) => props.theme.breakpoints.desktop}) {
-		padding: 0;
+		padding: 1rem 0;
 	}
 `;
 
