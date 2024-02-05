@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import Tag from './tag';
+import { Tag } from '@/types/place';
+import TagComponent from './tag';
+
+type TagsProps = {
+	tags: Tag[];
+};
 
 const Wrapper = styled.div`
 	display: flex;
@@ -11,33 +16,14 @@ const TagWrapper = styled.div`
 	margin: 0.25rem 0.25rem 0 0;
 `;
 
-const Tags = () => {
+const Tags = ({ tags }: TagsProps) => {
 	return (
 		<Wrapper>
-			<TagWrapper>
-				<Tag />
-			</TagWrapper>
-			<TagWrapper>
-				<Tag />
-			</TagWrapper>
-			<TagWrapper>
-				<Tag />
-			</TagWrapper>
-			<TagWrapper>
-				<Tag />
-			</TagWrapper>
-			<TagWrapper>
-				<Tag />
-			</TagWrapper>
-			<TagWrapper>
-				<Tag />
-			</TagWrapper>
-			<TagWrapper>
-				<Tag />
-			</TagWrapper>
-			<TagWrapper>
-				<Tag />
-			</TagWrapper>
+			{tags.map((tag) => (
+				<TagWrapper key={tag}>
+					<TagComponent tag={tag} />
+				</TagWrapper>
+			))}
 		</Wrapper>
 	);
 };

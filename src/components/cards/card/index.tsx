@@ -1,6 +1,11 @@
 import styled from 'styled-components';
+import { Place } from '@/types/place';
 import Thumbnail from './thumbnail';
 import Tags from './tags';
+
+type CardProps = {
+	place: Place;
+};
 
 const Wrapper = styled.div`
 	height: 100%;
@@ -25,18 +30,14 @@ const Description = styled.p`
 	text-align: center;
 `;
 
-const Card = () => {
+const Card = ({ place }: CardProps) => {
 	return (
 		<Wrapper>
 			<Content>
-				<Thumbnail src='https://picsum.photos/id/11/1000' label='Test' />
-				<Description>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi quo aspernatur culpa veniam
-					molestiae ea unde id! Sequi libero accusantium tenetur asperiores nulla. Distinctio dolorum neque
-					asperiores? Illo, laboriosam officiis.
-				</Description>
+				<Thumbnail src={place.img_url} label={place.name} />
+				<Description>{place.body}</Description>
 			</Content>
-			<Tags />
+			<Tags tags={place.tags} />
 		</Wrapper>
 	);
 };

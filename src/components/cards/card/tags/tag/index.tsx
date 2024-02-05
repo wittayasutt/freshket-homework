@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import { Tag } from '@/types/place';
+
+type TagProps = {
+	tag: Tag;
+};
 
 const Wrapper = styled.div`
 	background-color: ${(props) => props.theme.colors.green};
@@ -8,8 +13,8 @@ const Wrapper = styled.div`
 	border-radius: 16px;
 `;
 
-const Tag = () => {
-	return <Wrapper>Tag</Wrapper>;
+const TagComponent = ({ tag }: TagProps) => {
+	return <Wrapper>{tag}</Wrapper>;
 };
 
-export default Tag;
+export default TagComponent;

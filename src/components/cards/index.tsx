@@ -36,21 +36,11 @@ const CardWrapper = styled.div`
 const Cards = ({ places }: CardsProps) => {
 	return (
 		<Wrapper>
-			<CardWrapper>
-				<Card />
-			</CardWrapper>
-			<CardWrapper>
-				<Card />
-			</CardWrapper>
-			<CardWrapper>
-				<Card />
-			</CardWrapper>
-			<CardWrapper>
-				<Card />
-			</CardWrapper>
-			<CardWrapper>
-				<Card />
-			</CardWrapper>
+			{places.map((place) => (
+				<CardWrapper key={place.id}>
+					<Card place={place} />
+				</CardWrapper>
+			))}
 		</Wrapper>
 	);
 };
