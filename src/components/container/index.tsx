@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ReactNode } from 'react';
 
-type Props = {
+type ContainerProps = {
 	children: ReactNode;
 };
 
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 	}
 `;
 
-const Container = ({ children }: Props) => {
+const Container = ({ children }: ContainerProps) => {
 	return <Wrapper>{children}</Wrapper>;
 };
 

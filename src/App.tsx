@@ -1,15 +1,15 @@
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import theme from './styles/theme';
-import Container from './components/container';
-import './styles/global.css';
 
-const Title = styled.h1``;
+import Container from './components/container';
+import Cards from './components/cards';
+import './styles/global.css';
 
 const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<Container>
-				<Title>title</Title>
+				<Cards />
 			</Container>
 		</ThemeProvider>
 	);
