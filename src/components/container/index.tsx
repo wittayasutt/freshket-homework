@@ -12,6 +12,10 @@ const Wrapper = styled.div`
 		max-width: ${(props) => props.theme.breakpoints.desktop};
 		margin: auto;
 	}
+
+	@media (min-width: ${(props) => props.theme.breakpoints.desktop_xl}) {
+		max-width: ${(props) => props.theme.breakpoints.desktop_xl};
+	}
 `;
 
 const Container = ({ children }: ContainerProps) => {

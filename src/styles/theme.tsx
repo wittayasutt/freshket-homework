@@ -7,5 +7,6 @@ export default {
 	breakpoints: {
 		tablet: '768px',
 		desktop: '1024px',
+		desktop_xl: '1440px',
 	},
 };
