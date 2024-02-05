@@ -6,6 +6,26 @@ import theme from '@/styles/theme';
 
 import Cards from './index';
 
+jest.mock('@/mocks/tags.json', () => {
+	[
+		{
+			id: 1,
+			name: 'Brinebeast',
+			type: 'Earth',
+		},
+		{
+			id: 2,
+			name: 'Goolu',
+			type: 'Air',
+		},
+		{
+			id: 3,
+			name: 'Macaronifeet',
+			type: 'Fire',
+		},
+	];
+});
+
 const wrapper = ({ children }: { children: ReactNode }) => {
 	return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
