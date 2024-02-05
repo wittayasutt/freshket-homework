@@ -4,14 +4,14 @@ import { ThemeProvider } from 'styled-components';
 import { render, screen } from '@testing-library/react';
 import theme from '@/styles/theme';
 
-import Cards from '@/components/cards';
+import Cards from './index';
 
 const wrapper = ({ children }: { children: ReactNode }) => {
 	return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
 describe('cards', () => {
-	it('should not find any cards', () => {
+	it('should not have found any cards', () => {
 		render(<Cards places={[]} />, { wrapper });
 		expect(screen.queryByTestId('card')).not.toBeInTheDocument();
 	});
