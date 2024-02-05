@@ -36,6 +36,7 @@ const CardWrapper = styled.div`
 const Cards = ({ places }: CardsProps) => {
 	return (
 		<Wrapper>
+			{/* TODO: add unit test */}
 			{places.map((place) => (
 				<CardWrapper key={place.id}>
 					<Card place={place} />

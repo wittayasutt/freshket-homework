@@ -18,6 +18,7 @@ const TagWrapper = styled.div`
 const Tags = ({ tags }: TagsProps) => {
 	return (
 		<Wrapper>
+			{/* TODO: add unit test */}
 			{tags.map((tag) => (
 				<TagWrapper key={tag}>
 					<TagComponent tag={tag} />

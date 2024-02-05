@@ -34,6 +34,7 @@ const Thumbnail = ({ src, label }: ThumbnailProps) => {
 	return (
 		<Wrapper>
 			<Image src={src} alt={label} />
+			{/* TODO: add unit test */}
 			<Label>{label}</Label>
 		</Wrapper>
 	);
