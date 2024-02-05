@@ -11,6 +11,9 @@ const Wrapper = styled.div`
 	height: 100%;
 	padding: 1rem;
 
+	display: flex;
+	flex-direction: column;
+
 	background-color: ${(props) => props.theme.colors.white};
 	border-radius: 8px;
 	box-shadow: 0 4px 8px 6px rgba(0, 0, 0, 0.1);
@@ -24,7 +27,9 @@ const Wrapper = styled.div`
 	}
 `;
 
-const Content = styled.div``;
+const Content = styled.div`
+	flex: 1;
+`;
 
 const Description = styled.p`
 	text-align: center;
