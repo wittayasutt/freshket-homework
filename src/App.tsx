@@ -1,15 +1,17 @@
 import { ThemeProvider } from 'styled-components';
 import theme from './styles/theme';
+import './styles/global.css';
 
 import Container from './components/container';
 import Cards from './components/cards';
-import './styles/global.css';
+
+import places from './mocks/places.json';
 
 const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<Container>
-				<Cards />
+				<Cards places={places} />
 			</Container>
 		</ThemeProvider>
 	);

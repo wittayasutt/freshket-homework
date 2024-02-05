@@ -1,5 +1,10 @@
 import styled from 'styled-components';
+import { Place } from '@/types/place';
 import Card from './card';
+
+type CardsProps = {
+	places: Place[];
+};
 
 const Wrapper = styled.div`
 	padding: 1rem;
@@ -28,7 +33,7 @@ const CardWrapper = styled.div`
 	}
 `;
 
-const Cards = () => {
+const Cards = ({ places }: CardsProps) => {
 	return (
 		<Wrapper>
 			<CardWrapper>
